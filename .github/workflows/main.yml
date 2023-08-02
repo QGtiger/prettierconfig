@@ -1,31 +1,24 @@
-# This is a basic workflow to help you get started with Actions
+name: Publish Package to npmjs
 
-name: CI
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    # branches: [ main ]
+    # paths:
+    #   - 'src/'
+    tags:
+      - '**'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-          
-      - run: git config --global user.email "1426286337@qq.com"
-      - run: git config --global user.name "lightfish"
-      - run: npm run pub:patch
+      - run: npm run patch
+      - run: npm run pub
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}} # 刚刚设置的 NPM_TOKEN
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
