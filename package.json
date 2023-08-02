@@ -2,7 +2,7 @@
   "name": "@xybot/prettier-config",
   "version": "1.0.0",
   "description": "prettier 配置文件",
-  "main": "./prettierrc.json",
+  "main": "./index.json",
   "scripts": {
     "major": "npm version major",
     "minor": "npm version minor",
