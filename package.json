@@ -1,5 +1,5 @@
 {
-  "name": "@xybot/prettier-config",
+  "name": "@xybot/prettierconfig",
   "version": "1.0.0",
   "description": "prettier 配置文件",
   "main": "./index.json",
