@@ -4,7 +4,13 @@
   "description": "prettier 配置文件",
   "main": "./prettierrc.json",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "major": "npm version major",
+    "minor": "npm version minor",
+    "patch": "npm version patch",
+    "pub": "npm publish --access=public",
+    "pub:major": "npm run major && npm run pub",
+    "pub:minor": "npm run minor && npm run pub",
+    "pub:patch": "npm run patch && npm run pub"
   },
   "keywords": [
     "prettier",
