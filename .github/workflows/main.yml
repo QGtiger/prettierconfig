@@ -24,6 +24,6 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
           
-      - run: npm publish --access public
+      - run: npm run pub:patch
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}} # 刚刚设置的 NPM_TOKEN
