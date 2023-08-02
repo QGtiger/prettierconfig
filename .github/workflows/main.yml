@@ -14,6 +14,12 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm run pub
+      
+      - name: Configure Git
+        run: |
+          git config --global user.email "1426286337@qq.com"
+          git config --global user.name "lightfish"
+      
+      - run: npm run pub:patch
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
