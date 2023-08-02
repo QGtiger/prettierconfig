@@ -1,6 +1,6 @@
 {
   "name": "@lightfish/prettierconfig",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "prettier 配置文件",
   "main": "./index.json",
   "scripts": {
