@@ -45,3 +45,7 @@
 - `tabWidth`: 缩进使用的空格数。默认为2。
 - `useTabs`: 是否使用制表符进行缩进。可选值有 `true` 和 `false`。
 - `embeddedLanguageFormatting`: 是否自动格式化嵌入式代码块。可选值有 `auto`、`off`、和 `onWithoutIndent`。
+
+## 使用
+
+在项目中的 package.json 配置 prettier =》 你的 npm包名
