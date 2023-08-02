@@ -1,5 +1,5 @@
 {
-  "name": "@xybot/prettierconfig",
+  "name": "@lightfish/prettierconfig",
   "version": "1.0.0",
   "description": "prettier 配置文件",
   "main": "./index.json",
